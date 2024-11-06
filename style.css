@@ -1,0 +1,175 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    direction: rtl; /* Ensure right-to-left text flow */
+    text-align: right; /* Align text to the right */
+    padding-bottom: 60px; /* Space for footer */
+}
+
+/* Header Style */
+header {
+    background-color: #55135c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Container (Grid Layout) */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "right left-top"
+        "skills skills"; /* Span skills section over both columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Side Top */
+.left-top {
+    grid-area: left-top;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-top h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+/* Projects Section (Carousel) */
+.projects {
+    grid-area: skills;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projects h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Right Side (Contact) */
+.right {
+    grid-area: right;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+}
+
+.right h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.right p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Footer Style */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    font-size: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* Header text size for mobile */
+    header h1 {
+        font-size: 2em;
+    }
+
+    body{
+        text-align: center;
+    }
+
+    /* Make each card smaller for mobile */
+    .card {
+        width: 200px;
+        height: 200px;
+    }
+    /* Change the order of sections: Put left-top at the bottom */
+    .left-top {
+        order: 2;
+    }
+
+    .right {
+        order: 1;
+    }
+
+    .projects {
+        order: 0;
+    }
+}
