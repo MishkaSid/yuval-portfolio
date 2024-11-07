@@ -45,10 +45,11 @@ header h1 {
 /* Left Side Top */
 .left-top {
     grid-area: left-top;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255,0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .left-top h2 {
@@ -65,7 +66,7 @@ header h1 {
 /* Projects Section (Carousel) */
 .projects {
     grid-area: skills;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255,0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -111,7 +112,7 @@ header h1 {
 /* Right Side (Contact) */
 .right {
     grid-area: right;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255,0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -125,7 +126,7 @@ header h1 {
 
 .right p {
     font-size: 1em;
-    color: #555;
+    color: black;
 }
 
 
@@ -167,8 +168,7 @@ footer {
     text-align: center;
     background-color: #333;
     color: white;
-    padding: 10px 0;
-    font-size: 1em;
+    font-size: 0.8em;
     position: fixed;
     bottom: 0;
     width: 100%;
