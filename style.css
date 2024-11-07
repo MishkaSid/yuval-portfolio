@@ -7,6 +7,9 @@
 
 /* Body Style */
 body {
+    background-image: url("images/bullseye-gradient.png");
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     direction: rtl; /* Ensure right-to-left text flow */
@@ -16,8 +19,8 @@ body {
 
 /* Header Style */
 header {
-    background-color: #55135c;
     color: white;
+    
     text-align: center;
     padding: 20px 0;
 }
@@ -125,6 +128,40 @@ header h1 {
     color: #555;
 }
 
+
+/* Popup overlay */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup image styling */
+.popup-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+
 /* Footer Style */
 footer {
     text-align: center;
@@ -171,5 +208,17 @@ footer {
 
     .projects {
         order: 0;
+    }
+}
+@media (max-width: 600px) {
+    .popup-image {
+        max-width: 95%;
+        max-height: 70%;
+    }
+
+    .close-btn {
+        top: 5px;
+        right: 10px;
+        font-size: 1.8rem;
     }
 }
