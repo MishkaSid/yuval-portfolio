@@ -24,3 +24,14 @@ popup.addEventListener('click', (e) => {
         popup.style.display = 'none';
     }
 });
+
+// stops from downloading the image
+popupImage.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+
+document.querySelectorAll('.card img').forEach(img => {
+    img.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
+});
