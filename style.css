@@ -85,9 +85,6 @@ header h1 {
     gap: 10px;
 }
 
-.carousel::-webkit-scrollbar {
-    display: none;
-}
 
 .card {
     width: 250px;
