@@ -84,6 +84,33 @@ header h1 {
     padding: 10px 0;
     gap: 10px;
 }
+/* Style the scrollbar for Webkit browsers */
+body, .carousel {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #a890d3 transparent; /* Purple thumb, no track background */
+}
+
+body::-webkit-scrollbar,
+.carousel::-webkit-scrollbar {
+    width: 10px; /* Scrollbar width */
+    height: 10px; /* Horizontal scrollbar height */
+}
+
+body::-webkit-scrollbar-track,
+.carousel::-webkit-scrollbar-track {
+    background: transparent; /* No background */
+}
+
+body::-webkit-scrollbar-thumb,
+.carousel::-webkit-scrollbar-thumb {
+    background: #a890d3; /* Subtle purple color */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: #8f79c4; /* Slightly darker purple on hover */
+}
 
 
 .card {
